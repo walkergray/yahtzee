@@ -89,7 +89,7 @@ public class Main
 		Arrays.fill(diceChoices, false);
 		for(int i = 0; i < NUMBER_OF_DICE; i++)
 		{
-			diceChoices[i] = individualResponses[i].toLowerCase().equals("y");
+			diceChoices[i] = individualResponses[i].toLowerCase().equals("n");
 		}
 		return diceChoices;
 	}
