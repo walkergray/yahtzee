@@ -62,7 +62,7 @@ public class Main
 	{
 		Scanner askTheUser = new Scanner(System.in);
 		System.out.print("Enter 'y' to play again ");
-		return askTheUser.next().charAt(0);
+		return askTheUser.next().toLowerCase().charAt(0);
 	}
 
 	public static String getUserInput()
@@ -86,10 +86,10 @@ public class Main
 	{
 		String[] individualResponses = diceToKeep.split("(?!^)");
 		boolean[] diceChoices = new boolean[NUMBER_OF_DICE];
-		Arrays.fill(diceChoices, true);
+		Arrays.fill(diceChoices, false);
 		for(int i = 0; i < NUMBER_OF_DICE; i++)
 		{
-			diceChoices[i] = individualResponses[i].equals("n");
+			diceChoices[i] = individualResponses[i].toLowerCase().equals("y");
 		}
 		return diceChoices;
 	}
@@ -134,6 +134,7 @@ public class Main
 		char userContinuePlaying = 'y';
 		while(userContinuePlaying == 'y')
 		{
+			rollTheDice(setOfDice); //shuffle
 			playOneRound(setOfDice);
 			printScores(setOfDice);
 			userContinuePlaying = continuePlayingPrompt();

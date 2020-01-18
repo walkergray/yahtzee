@@ -66,14 +66,14 @@ public class ScoreLinesSixSidedDieYahtzee
 		});
 
 		//sets 3 of a kind
-		for(int i = (sortedSetOfDice.size()-3); i >= 0; i--)
+		for(int i = sortedSetOfDice.size()-3; i >= 0; i--)
 		{
 			List<SixSidedDie> checkForThreeKind = sortedSetOfDice.subList(i, i+3);
 			if(checkForThreeKind.get(0).getCurrentFace()==checkForThreeKind.get(1).getCurrentFace() &&
 			   checkForThreeKind.get(0).getCurrentFace()==checkForThreeKind.get(2).getCurrentFace())
 			{
 				threeOfAKindLine = chanceLine;
-				if(i == (sortedSetOfDice.size()-1)-3) //full house check
+				if(i == sortedSetOfDice.size()-3) //full house check
 				{
 					if(sortedSetOfDice.get(0).getCurrentFace()==sortedSetOfDice.get(1).getCurrentFace())
 					{
