@@ -86,7 +86,7 @@ public class Main
 	{
 		String[] individualResponses = diceToKeep.split("(?!^)");
 		boolean[] diceChoices = new boolean[NUMBER_OF_DICE];
-		Arrays.fill(diceChoices, false);
+		Arrays.fill(diceChoices, true);
 		for(int i = 0; i < NUMBER_OF_DICE; i++)
 		{
 			diceChoices[i] = individualResponses[i].toLowerCase().equals("n");
