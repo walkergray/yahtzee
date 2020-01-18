@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main
+public class Yahtzee
 {
 	static final int NUMBER_OF_DICE = 5;
 	static final int NUMBER_OF_ROLLS_PER_TURN = 3;
