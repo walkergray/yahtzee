@@ -21,7 +21,6 @@ public class Yahtzee
         function for outputting scores
         need way of designating which dice to not roll --- or which dice TO roll
         function to parse the user inputted string for dice to keep
-        globals should be declared in main - better efficiency. if needed, create a second main
         function for requesting and accepting user input;
         const numRollsPerTurn;
      */
