@@ -100,7 +100,7 @@ public class ScoreLinesSixSidedDieYahtzee
 			fourOfAKindLine = chanceLine;
 		}
 
-		//small straight, large straight, and yahtzee are behind a condition because efficiency
+		//small and large straight are behind a condition because efficiency
 		if(fourOfAKindLine == 0)
 		{
 			//small straight
@@ -129,17 +129,17 @@ public class ScoreLinesSixSidedDieYahtzee
 					largeStraightLine = LARGE_STRAIGHT_VALUE;
 				}
 			}
+		}
 
-			//yahtzee
-			if(oneLine == 1*sortedSetOfDice.size()   ||
-			   twoLine == 2*sortedSetOfDice.size()   ||
-			   threeLine == 3*sortedSetOfDice.size() ||
-			   fourLine == 4*sortedSetOfDice.size()  ||
-			   fiveLine == 5*sortedSetOfDice.size()  ||
-			   sixLine == 6*sortedSetOfDice.size())
-			{
-				yahtzeeLine = YAHTZEE_VALUE;
-			}
+		//yahtzee
+		if(oneLine == 1*sortedSetOfDice.size()   ||
+		   twoLine == 2*sortedSetOfDice.size()   ||
+		   threeLine == 3*sortedSetOfDice.size() ||
+		   fourLine == 4*sortedSetOfDice.size()  ||
+		   fiveLine == 5*sortedSetOfDice.size()  ||
+		   sixLine == 6*sortedSetOfDice.size())
+		{
+			yahtzeeLine = YAHTZEE_VALUE;
 		}
 	}
 

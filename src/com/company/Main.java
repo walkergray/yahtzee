@@ -72,7 +72,7 @@ public class Main
 		String userInput = askTheUser.next();
 		if(userInput.length() > NUMBER_OF_DICE)
 		{
-			userInput = userInput.substring(0,NUMBER_OF_DICE-1);
+			userInput = userInput.substring(0,NUMBER_OF_DICE);
 		} else {
 			while(userInput.length() < NUMBER_OF_DICE)
 			{
