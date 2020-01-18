@@ -69,8 +69,8 @@ public class ScoreLinesSixSidedDieYahtzee
 		for(int i = (sortedSetOfDice.size()-1)-3; i >= 0; i--)
 		{
 			List<SixSidedDie> checkForThreeKind = sortedSetOfDice.subList(i, i+3);
-			if(checkForThreeKind.get(i).getCurrentFace()==checkForThreeKind.get(i+1).getCurrentFace() &&
-			   checkForThreeKind.get(i).getCurrentFace()==checkForThreeKind.get(i+2).getCurrentFace())
+			if(checkForThreeKind.get(0).getCurrentFace()==checkForThreeKind.get(1).getCurrentFace() &&
+			   checkForThreeKind.get(0).getCurrentFace()==checkForThreeKind.get(2).getCurrentFace())
 			{
 				threeOfAKindLine = chanceLine;
 				if(i == (sortedSetOfDice.size()-1)-3) //full house check
@@ -90,14 +90,14 @@ public class ScoreLinesSixSidedDieYahtzee
 		}
 
 		//sets 4 of a kind
-		for(int i = (sortedSetOfDice.size()-1)-4; i >= 0; i--)
+		if(oneLine >= 1*sortedSetOfDice.size()   ||
+		   twoLine >= 2*sortedSetOfDice.size()   ||
+		   threeLine >= 3*sortedSetOfDice.size() ||
+		   fourLine >= 4*sortedSetOfDice.size()  ||
+		   fiveLine >= 5*sortedSetOfDice.size()  ||
+		   sixLine >= 6*sortedSetOfDice.size())
 		{
-			List<SixSidedDie> checkForFourKind = sortedSetOfDice.subList(i, i+4);
-			if(checkForFourKind.get(i)==checkForFourKind.get(i+1) && checkForFourKind.get(i)==checkForFourKind.get(i+2) && checkForFourKind.get(i)==checkForFourKind.get(i+3))
-			{
-				fourOfAKindLine = chanceLine;
-				break;
-			}
+			fourOfAKindLine = chanceLine;
 		}
 
 		//small straight, large straight, and yahtzee are behind a condition because efficiency

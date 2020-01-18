@@ -108,7 +108,7 @@ public class Main
 	public static void playOneRound(ArrayList<SixSidedDie> setOfDice)
 	{
 		String diceToKeep = "nnnnn";
-		for(int timesRolled = 0; timesRolled < NUMBER_OF_ROLLS_PER_TURN && !diceToKeep.equals("yyyyy");)
+		for(int timesRolled = 0; !diceToKeep.equals("yyyyy");)
 		{
 			boolean[] diceChosenForRoll = parseKeepString(diceToKeep);
 			ArrayList<SixSidedDie> cupOfDice = new ArrayList<>();
@@ -121,6 +121,8 @@ public class Main
 			}
 			rollTheDice(cupOfDice);
 			timesRolled++;
+			if(timesRolled >= NUMBER_OF_ROLLS_PER_TURN)
+				break;
 			System.out.print("Your roll was:");
 			viewTheDice(setOfDice);
 			diceToKeep = getUserInput();
