@@ -69,7 +69,7 @@ public class Main
 	{
 		Scanner askTheUser = new Scanner(System.in);
 		System.out.print("enter dice to keep (y or n) ");
-		String userInput = askTheUser.next();
+		String userInput = askTheUser.nextLine();
 		if(userInput.length() > NUMBER_OF_DICE)
 		{
 			userInput = userInput.substring(0,NUMBER_OF_DICE);

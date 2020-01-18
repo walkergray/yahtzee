@@ -15,7 +15,7 @@ public class SixSidedDie extends DieLikeObject<Integer> implements Comparable<Si
     @Override
     public void roll()
     {
-        Random rand = new Random();
+        Random rand = new Random(System.nanoTime());
         currentFace = getFaces().get(rand.nextInt(getFaces().size()));
     }
 
