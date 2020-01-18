@@ -66,7 +66,7 @@ public class ScoreLinesSixSidedDieYahtzee
 		});
 
 		//sets 3 of a kind
-		for(int i = (sortedSetOfDice.size()-1)-3; i >= 0; i--)
+		for(int i = (sortedSetOfDice.size()-3); i >= 0; i--)
 		{
 			List<SixSidedDie> checkForThreeKind = sortedSetOfDice.subList(i, i+3);
 			if(checkForThreeKind.get(0).getCurrentFace()==checkForThreeKind.get(1).getCurrentFace() &&
@@ -90,12 +90,12 @@ public class ScoreLinesSixSidedDieYahtzee
 		}
 
 		//sets 4 of a kind
-		if(oneLine >= 1*sortedSetOfDice.size()   ||
-		   twoLine >= 2*sortedSetOfDice.size()   ||
-		   threeLine >= 3*sortedSetOfDice.size() ||
-		   fourLine >= 4*sortedSetOfDice.size()  ||
-		   fiveLine >= 5*sortedSetOfDice.size()  ||
-		   sixLine >= 6*sortedSetOfDice.size())
+		if(oneLine >= 1*4   ||
+		   twoLine >= 2*4   ||
+		   threeLine >= 3*4 ||
+		   fourLine >= 4*4  ||
+		   fiveLine >= 5*4  ||
+		   sixLine >= 6*4)
 		{
 			fourOfAKindLine = chanceLine;
 		}
